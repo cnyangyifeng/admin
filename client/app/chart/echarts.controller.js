@@ -2,9 +2,9 @@
     'use strict';
 
     angular.module('app.chart')
-        .controller('EChartsCtrl', ['$scope', '$timeout', EChartsCtrl])
+        .controller('EChartsCtrl', ['$scope', '$timeout', EChartsCtrl]);
 
-    function EChartsCtrl($scope, $timeout) {
+    function EChartsCtrl($scope) {
         // Build ECharts with Bar, Line, Pie, Radar, Scatter, Chord, Gauge, Funnel
 
         $scope.line1 = {};
@@ -35,739 +35,736 @@
         $scope.funnel1 = {};
 
         $scope.line1.options = {
-            tooltip : {
+            tooltip: {
                 trigger: 'axis'
             },
             legend: {
-                data:['Highest temperature','Lowest temperature']
+                data: ['Highest temperature', 'Lowest temperature']
             },
             toolbox: {
-                show : true,
-                feature : {
-                    restore : {show: true, title: "restore"},
-                    saveAsImage : {show: true, title: "save as image"}
+                show: true,
+                feature: {
+                    restore: {show: true, title: "restore"},
+                    saveAsImage: {show: true, title: "save as image"}
                 }
             },
-            calculable : true,
-            xAxis : [
+            calculable: true,
+            xAxis: [
                 {
-                    type : 'category',
-                    boundaryGap : false,
-                    data : ['Mon.','Tue.','Wed.','Thu.','Fri.','Sat.','Sun.']
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['Mon.', 'Tue.', 'Wed.', 'Thu.', 'Fri.', 'Sat.', 'Sun.']
                 }
             ],
-            yAxis : [
+            yAxis: [
                 {
-                    type : 'value',
-                    axisLabel : {
+                    type: 'value',
+                    axisLabel: {
                         formatter: '{value} °C'
                     }
                 }
             ],
-            series : [
+            series: [
                 {
-                    name:'Highest temperature',
-                    type:'line',
-                    data:[11, 11, 15, 13, 12, 13, 10],
-                    markPoint : {
-                        data : [
-                            {type : 'max', name: 'Max'},
-                            {type : 'min', name: 'Min'}
+                    name: 'Highest temperature',
+                    type: 'line',
+                    data: [11, 11, 15, 13, 12, 13, 10],
+                    markPoint: {
+                        data: [
+                            {type: 'max', name: 'Max'},
+                            {type: 'min', name: 'Min'}
                         ]
                     },
-                    markLine : {
-                        data : [
-                            {type : 'average', name: 'Average'}
+                    markLine: {
+                        data: [
+                            {type: 'average', name: 'Average'}
                         ]
                     }
                 },
                 {
-                    name:'Lowest temperature',
-                    type:'line',
-                    data:[1, -2, 2, 5, 3, 2, 0],
-                    markPoint : {
-                        data : [
-                            {name : 'Lowest temperature', value : -2, xAxis: 1, yAxis: -1.5}
+                    name: 'Lowest temperature',
+                    type: 'line',
+                    data: [1, -2, 2, 5, 3, 2, 0],
+                    markPoint: {
+                        data: [
+                            {name: 'Lowest temperature', value: -2, xAxis: 1, yAxis: -1.5}
                         ]
                     },
-                    markLine : {
-                        data : [
-                            {type : 'average', name : 'Average'}
+                    markLine: {
+                        data: [
+                            {type: 'average', name: 'Average'}
                         ]
                     }
                 }
             ]
         };
         $scope.line2.options = {
-            tooltip : {
+            tooltip: {
                 trigger: 'axis'
             },
             legend: {
-                data:['Email','Affiliate','Video Ads','Direct','Search']
+                data: ['Email', 'Affiliate', 'Video Ads', 'Direct', 'Search']
             },
             toolbox: {
-                show : true,
-                feature : {
-                    restore : {show: true, title: "restore"},
-                    saveAsImage : {show: true, title: "save as image"}
+                show: true,
+                feature: {
+                    restore: {show: true, title: "restore"},
+                    saveAsImage: {show: true, title: "save as image"}
                 }
             },
-            calculable : true,
-            xAxis : [
+            calculable: true,
+            xAxis: [
                 {
-                    type : 'category',
-                    boundaryGap : false,
-                    data : ['Mon.','Tue.','Wed.','Thu.','Fri.','Sat.','Sun.']
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['Mon.', 'Tue.', 'Wed.', 'Thu.', 'Fri.', 'Sat.', 'Sun.']
                 }
             ],
-            yAxis : [
+            yAxis: [
                 {
-                    type : 'value'
+                    type: 'value'
                 }
             ],
-            series : [
+            series: [
                 {
-                    name:'Email',
-                    type:'line',
+                    name: 'Email',
+                    type: 'line',
                     stack: 'Sum',
-                    data:[120, 132, 101, 134, 90, 230, 210]
+                    data: [120, 132, 101, 134, 90, 230, 210]
                 },
                 {
-                    name:'Affiliate',
-                    type:'line',
+                    name: 'Affiliate',
+                    type: 'line',
                     stack: 'Sum',
-                    data:[220, 182, 191, 234, 290, 330, 310]
+                    data: [220, 182, 191, 234, 290, 330, 310]
                 },
                 {
-                    name:'Video Ads',
-                    type:'line',
+                    name: 'Video Ads',
+                    type: 'line',
                     stack: 'Sum',
-                    data:[150, 232, 201, 154, 190, 330, 410]
+                    data: [150, 232, 201, 154, 190, 330, 410]
                 },
                 {
-                    name:'Direct',
-                    type:'line',
+                    name: 'Direct',
+                    type: 'line',
                     stack: 'Sum',
-                    data:[320, 332, 301, 334, 390, 330, 320]
+                    data: [320, 332, 301, 334, 390, 330, 320]
                 },
                 {
-                    name:'Search',
-                    type:'line',
+                    name: 'Search',
+                    type: 'line',
                     stack: 'Sum',
-                    data:[820, 932, 901, 934, 1290, 1330, 1320]
+                    data: [820, 932, 901, 934, 1290, 1330, 1320]
                 }
             ]
         };
         $scope.line3.options = {
-            title : {
-                text: 'Sales',
+            title: {
+                text: 'Sales'
             },
-            tooltip : {
+            tooltip: {
                 trigger: 'axis'
             },
             legend: {
-                data:['Intention','Pre-order','Deal closed']
+                data: ['Intention', 'Pre-order', 'Deal closed']
             },
             toolbox: {
-                show : true,
-                feature : {
-                    restore : {show: true, title: "restore"},
-                    saveAsImage : {show: true, title: "save as image"}
+                show: true,
+                feature: {
+                    restore: {show: true, title: "restore"},
+                    saveAsImage: {show: true, title: "save as image"}
                 }
             },
-            calculable : true,
-            xAxis : [
+            calculable: true,
+            xAxis: [
                 {
-                    type : 'category',
-                    boundaryGap : false,
-                    data : ['Mon.','Tue.','Wed.','Thu.','Fri.','Sat.','Sun.']
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['Mon.', 'Tue.', 'Wed.', 'Thu.', 'Fri.', 'Sat.', 'Sun.']
                 }
             ],
-            yAxis : [
+            yAxis: [
                 {
-                    type : 'value'
+                    type: 'value'
                 }
             ],
-            series : [
+            series: [
                 {
-                    name:'Deal closed',
-                    type:'line',
-                    smooth:true,
+                    name: 'Deal closed',
+                    type: 'line',
+                    smooth: true,
                     itemStyle: {normal: {areaStyle: {type: 'default'}}},
-                    data:[10, 12, 21, 54, 260, 830, 710]
+                    data: [10, 12, 21, 54, 260, 830, 710]
                 },
                 {
-                    name:'Pre-order',
-                    type:'line',
-                    smooth:true,
+                    name: 'Pre-order',
+                    type: 'line',
+                    smooth: true,
                     itemStyle: {normal: {areaStyle: {type: 'default'}}},
-                    data:[30, 182, 434, 791, 390, 30, 10]
+                    data: [30, 182, 434, 791, 390, 30, 10]
                 },
                 {
-                    name:'Intention',
-                    type:'line',
-                    smooth:true,
+                    name: 'Intention',
+                    type: 'line',
+                    smooth: true,
                     itemStyle: {normal: {areaStyle: {type: 'default'}}},
-                    data:[1320, 1132, 601, 234, 120, 90, 20]
+                    data: [1320, 1132, 601, 234, 120, 90, 20]
                 }
             ]
         };
         $scope.line4.options = {
-            tooltip : {
+            tooltip: {
                 trigger: 'axis'
             },
             legend: {
-                data:['Email','Affiliate','Video Ads','Direct','Search']
+                data: ['Email', 'Affiliate', 'Video Ads', 'Direct', 'Search']
             },
             toolbox: {
-                show : true,
-                feature : {
-                    restore : {show: true, title: "restore"},
-                    saveAsImage : {show: true, title: "save as image"}
+                show: true,
+                feature: {
+                    restore: {show: true, title: "restore"},
+                    saveAsImage: {show: true, title: "save as image"}
                 }
             },
-            calculable : true,
-            xAxis : [
+            calculable: true,
+            xAxis: [
                 {
-                    type : 'category',
-                    boundaryGap : false,
-                    data : ['Mon.','Tue.','Wed.','Thu.','Fri.','Sat.','Sun.']
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['Mon.', 'Tue.', 'Wed.', 'Thu.', 'Fri.', 'Sat.', 'Sun.']
                 }
             ],
-            yAxis : [
+            yAxis: [
                 {
-                    type : 'value'
+                    type: 'value'
                 }
             ],
-            series : [
+            series: [
                 {
-                    name:'Email',
-                    type:'line',
+                    name: 'Email',
+                    type: 'line',
                     stack: 'Sum',
                     itemStyle: {normal: {areaStyle: {type: 'default'}}},
-                    data:[120, 132, 101, 134, 90, 230, 210]
+                    data: [120, 132, 101, 134, 90, 230, 210]
                 },
                 {
-                    name:'Affiliate',
-                    type:'line',
+                    name: 'Affiliate',
+                    type: 'line',
                     stack: 'Sum',
                     itemStyle: {normal: {areaStyle: {type: 'default'}}},
-                    data:[220, 182, 191, 234, 290, 330, 310]
+                    data: [220, 182, 191, 234, 290, 330, 310]
                 },
                 {
-                    name:'Video Ads',
-                    type:'line',
+                    name: 'Video Ads',
+                    type: 'line',
                     stack: 'Sum',
                     itemStyle: {normal: {areaStyle: {type: 'default'}}},
-                    data:[150, 232, 201, 154, 190, 330, 410]
+                    data: [150, 232, 201, 154, 190, 330, 410]
                 },
                 {
-                    name:'Direct',
-                    type:'line',
+                    name: 'Direct',
+                    type: 'line',
                     stack: 'Sum',
                     itemStyle: {normal: {areaStyle: {type: 'default'}}},
-                    data:[320, 332, 301, 334, 390, 330, 320]
+                    data: [320, 332, 301, 334, 390, 330, 320]
                 },
                 {
-                    name:'Search',
-                    type:'line',
+                    name: 'Search',
+                    type: 'line',
                     stack: 'Sum',
                     itemStyle: {normal: {areaStyle: {type: 'default'}}},
-                    data:[820, 932, 901, 934, 1290, 1330, 1320]
+                    data: [820, 932, 901, 934, 1290, 1330, 1320]
                 }
             ]
         };
 
         $scope.bar1.options = {
-            tooltip : {
+            tooltip: {
                 trigger: 'axis'
             },
             legend: {
-                data:['Evaporation','Precipitation']
+                data: ['支出', '收入']
             },
             toolbox: {
-                show : true,
-                feature : {
-                    restore : {show: true, title: "restore"},
-                    saveAsImage : {show: true, title: "save as image"}
+                show: true,
+                feature: {
+                    restore: {show: true, title: "刷新数据"}
                 }
             },
-            calculable : true,
-            xAxis : [
+            calculable: false,
+            xAxis: [
                 {
-                    type : 'category',
-                    data : ['Jan.','Feb.','Mar.','Apr.','May','Jun.','Jul.','Aug.','Sep.','Oct.','Nov.','Dec.']
+                    type: 'category',
+                    data: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月']
                 }
             ],
-            yAxis : [
+            yAxis: [
                 {
-                    type : 'value'
+                    type: 'value'
                 }
             ],
-            series : [
+            series: [
                 {
-                    name:'Evaporation',
-                    type:'bar',
-                    data:[2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3],
-                    markPoint : {
-                        data : [
-                            {type : 'max', name: 'Max'},
-                            {type : 'min', name: 'Min'}
-                        ]
+                    name: '支出',
+                    type: 'bar',
+                    itemStyle: {
+                        normal: {
+                            color: $scope.color.info
+                        }
                     },
-                    markLine : {
-                        data : [
-                            {type : 'average', name: 'Average'}
+                    data: [2.0, 4.0, 6.0, 8.0, 10.0, 12.0, 14.0, 12.0, 10.0, 8.0, 6.0, 4.0],
+                    markPoint: {
+                        data: [
+                            {type: 'max', name: '最大'},
+                            {type: 'min', name: '最小'}
                         ]
                     }
                 },
                 {
-                    name:'Precipitation',
-                    type:'bar',
-                    data:[2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3],
-                    markPoint : {
-                        data : [
-                            {name : 'Highest', value : 182.2, xAxis: 7, yAxis: 183, symbolSize:18},
-                            {name : 'Lowest', value : 2.3, xAxis: 11, yAxis: 3}
-                        ]
+                    name: '收入',
+                    type: 'bar',
+                    itemStyle: {
+                        normal: {
+                            color: $scope.color.success
+                        }
                     },
-                    markLine : {
-                        data : [
-                            {type : 'average', name : 'Average'}
+                    data: [8.0, 12.0, 16.0, 20.0, 24.0, 28.0, 32.0, 28.0, 24.0, 20.0, 16.0, 12.0],
+                    markPoint: {
+                        data: [
+                            {type: 'max', name: '最大'},
+                            {type: 'min', name: '最小'}
                         ]
                     }
                 }
             ]
         };
         $scope.bar2.options = {
-            tooltip : {
+            tooltip: {
                 trigger: 'axis',
-                axisPointer : {
-                    type : 'shadow'
+                axisPointer: {
+                    type: 'shadow'
                 }
             },
             legend: {
-                data:['Direct','Email','Affiliate','Video Ads','Search','Baidu','Google','Bing','Others']
+                data: ['Direct', 'Email', 'Affiliate', 'Video Ads', 'Search', 'Baidu', 'Google', 'Bing', 'Others']
             },
-            calculable : true,
-            xAxis : [
+            calculable: true,
+            xAxis: [
                 {
-                    type : 'category',
-                    data : ['Mon.','Tue.','Wed.','Thu.','Fri.','Sat.','Sun.']
+                    type: 'category',
+                    data: ['Mon.', 'Tue.', 'Wed.', 'Thu.', 'Fri.', 'Sat.', 'Sun.']
                 }
             ],
-            yAxis : [
+            yAxis: [
                 {
-                    type : 'value'
+                    type: 'value'
                 }
             ],
-            series : [
+            series: [
                 {
-                    name:'Direct',
-                    type:'bar',
-                    data:[320, 332, 301, 334, 390, 330, 320]
+                    name: 'Direct',
+                    type: 'bar',
+                    data: [320, 332, 301, 334, 390, 330, 320]
                 },
                 {
-                    name:'Email',
-                    type:'bar',
+                    name: 'Email',
+                    type: 'bar',
                     stack: 'Ads',
-                    data:[120, 132, 101, 134, 90, 230, 210]
+                    data: [120, 132, 101, 134, 90, 230, 210]
                 },
                 {
-                    name:'Affiliate',
-                    type:'bar',
+                    name: 'Affiliate',
+                    type: 'bar',
                     stack: 'Ads',
-                    data:[220, 182, 191, 234, 290, 330, 310]
+                    data: [220, 182, 191, 234, 290, 330, 310]
                 },
                 {
-                    name:'Video Ads',
-                    type:'bar',
+                    name: 'Video Ads',
+                    type: 'bar',
                     stack: 'Ads',
-                    data:[150, 232, 201, 154, 190, 330, 410]
+                    data: [150, 232, 201, 154, 190, 330, 410]
                 },
                 {
-                    name:'Search',
-                    type:'bar',
-                    data:[862, 1018, 964, 1026, 1679, 1600, 1570],
-                    markLine : {
-                        itemStyle:{
-                            normal:{
-                                lineStyle:{
+                    name: 'Search',
+                    type: 'bar',
+                    data: [862, 1018, 964, 1026, 1679, 1600, 1570],
+                    markLine: {
+                        itemStyle: {
+                            normal: {
+                                lineStyle: {
                                     type: 'dashed'
                                 }
                             }
                         },
-                        data : [
-                            [{type : 'min'}, {type : 'max'}]
+                        data: [
+                            [{type: 'min'}, {type: 'max'}]
                         ]
                     }
                 },
                 {
-                    name:'Baidu',
-                    type:'bar',
-                    barWidth : 5,
+                    name: 'Baidu',
+                    type: 'bar',
+                    barWidth: 5,
                     stack: 'Search',
-                    data:[620, 732, 701, 734, 1090, 1130, 1120]
+                    data: [620, 732, 701, 734, 1090, 1130, 1120]
                 },
                 {
-                    name:'Google',
-                    type:'bar',
+                    name: 'Google',
+                    type: 'bar',
                     stack: 'Search',
-                    data:[120, 132, 101, 134, 290, 230, 220]
+                    data: [120, 132, 101, 134, 290, 230, 220]
                 },
                 {
-                    name:'Bing',
-                    type:'bar',
+                    name: 'Bing',
+                    type: 'bar',
                     stack: 'Search',
-                    data:[60, 72, 71, 74, 190, 130, 110]
+                    data: [60, 72, 71, 74, 190, 130, 110]
                 },
                 {
-                    name:'Others',
-                    type:'bar',
+                    name: 'Others',
+                    type: 'bar',
                     stack: 'Search',
-                    data:[62, 82, 91, 84, 109, 110, 120]
+                    data: [62, 82, 91, 84, 109, 110, 120]
                 }
             ]
         };
         $scope.bar3.options = {
-            title : {
+            title: {
                 text: 'World Population',
                 subtext: 'From the Internet'
             },
-            tooltip : {
+            tooltip: {
                 trigger: 'axis'
             },
             legend: {
-                data:['2011', '2012']
+                data: ['2011', '2012']
             },
             toolbox: {
-                show : true,
-                feature : {
-                    restore : {show: true, title: "restore"},
-                    saveAsImage : {show: true, title: "save as image"}
+                show: true,
+                feature: {
+                    restore: {show: true, title: "restore"},
+                    saveAsImage: {show: true, title: "save as image"}
                 }
             },
-            calculable : true,
-            xAxis : [
+            calculable: true,
+            xAxis: [
                 {
-                    type : 'value',
-                    boundaryGap : [0, 0.01]
+                    type: 'value',
+                    boundaryGap: [0, 0.01]
                 }
             ],
-            yAxis : [
+            yAxis: [
                 {
-                    type : 'category',
-                    data : ['Brazil','Indonesia','USA','India','China','World Population (10k)']
+                    type: 'category',
+                    data: ['Brazil', 'Indonesia', 'USA', 'India', 'China', 'World Population (10k)']
                 }
             ],
-            series : [
+            series: [
                 {
-                    name:'2011',
-                    type:'bar',
-                    data:[18203, 23489, 29034, 104970, 131744, 630230]
+                    name: '2011',
+                    type: 'bar',
+                    data: [18203, 23489, 29034, 104970, 131744, 630230]
                 },
                 {
-                    name:'2012',
-                    type:'bar',
-                    data:[19325, 23438, 31000, 121594, 134141, 681807]
+                    name: '2012',
+                    type: 'bar',
+                    data: [19325, 23438, 31000, 121594, 134141, 681807]
                 }
             ]
         };
         $scope.bar4.options = {
-            tooltip : {
+            tooltip: {
                 trigger: 'axis',
-                axisPointer : {            
-                    type : 'shadow'
+                axisPointer: {
+                    type: 'shadow'
                 }
             },
             legend: {
-                data:['Direct', 'Email','Affiliate','Video Ads','Search']
+                data: ['Direct', 'Email', 'Affiliate', 'Video Ads', 'Search']
             },
             toolbox: {
-                show : true,
-                feature : {
-                    restore : {show: true, title: "restore"},
-                    saveAsImage : {show: true, title: "save as image"}
+                show: true,
+                feature: {
+                    restore: {show: true, title: "restore"},
+                    saveAsImage: {show: true, title: "save as image"}
                 }
             },
-            calculable : true,
-            xAxis : [
+            calculable: true,
+            xAxis: [
                 {
-                    type : 'value'
+                    type: 'value'
                 }
             ],
-            yAxis : [
+            yAxis: [
                 {
-                    type : 'category',
-                    data : ['Mon.','Tue.','Wed.','Thu.','Fri.','Sat.','Sun.']
+                    type: 'category',
+                    data: ['Mon.', 'Tue.', 'Wed.', 'Thu.', 'Fri.', 'Sat.', 'Sun.']
                 }
             ],
-            series : [
+            series: [
                 {
-                    name:'Direct',
-                    type:'bar',
+                    name: 'Direct',
+                    type: 'bar',
                     stack: 'Sum',
-                    itemStyle : { normal: {label : {show: true, position: 'insideRight'}}},
-                    data:[320, 302, 301, 334, 390, 330, 320]
+                    itemStyle: {normal: {label: {show: true, position: 'insideRight'}}},
+                    data: [320, 302, 301, 334, 390, 330, 320]
                 },
                 {
-                    name:'Email',
-                    type:'bar',
+                    name: 'Email',
+                    type: 'bar',
                     stack: 'Sum',
-                    itemStyle : { normal: {label : {show: true, position: 'insideRight'}}},
-                    data:[120, 132, 101, 134, 90, 230, 210]
+                    itemStyle: {normal: {label: {show: true, position: 'insideRight'}}},
+                    data: [120, 132, 101, 134, 90, 230, 210]
                 },
                 {
-                    name:'Affiliate',
-                    type:'bar',
+                    name: 'Affiliate',
+                    type: 'bar',
                     stack: 'Sum',
-                    itemStyle : { normal: {label : {show: true, position: 'insideRight'}}},
-                    data:[220, 182, 191, 234, 290, 330, 310]
+                    itemStyle: {normal: {label: {show: true, position: 'insideRight'}}},
+                    data: [220, 182, 191, 234, 290, 330, 310]
                 },
                 {
-                    name:'Video Ads',
-                    type:'bar',
+                    name: 'Video Ads',
+                    type: 'bar',
                     stack: 'Sum',
-                    itemStyle : { normal: {label : {show: true, position: 'insideRight'}}},
-                    data:[150, 212, 201, 154, 190, 330, 410]
+                    itemStyle: {normal: {label: {show: true, position: 'insideRight'}}},
+                    data: [150, 212, 201, 154, 190, 330, 410]
                 },
                 {
-                    name:'Search',
-                    type:'bar',
+                    name: 'Search',
+                    type: 'bar',
                     stack: 'Sum',
-                    itemStyle : { normal: {label : {show: true, position: 'insideRight'}}},
-                    data:[820, 832, 901, 934, 1290, 1330, 1320]
+                    itemStyle: {normal: {label: {show: true, position: 'insideRight'}}},
+                    data: [820, 832, 901, 934, 1290, 1330, 1320]
                 }
             ]
         };
         $scope.bar5.options = {
-            tooltip : {
+            tooltip: {
                 trigger: 'axis',
-                axisPointer : {         
-                    type : 'shadow'
+                axisPointer: {
+                    type: 'shadow'
                 }
             },
             legend: {
-                data:['Profit', 'Cost', 'Income']
+                data: ['收入', '成本', '利润']
             },
-            toolbox: {
-                show : true,
-                feature : {
-                    restore : {show: true, title: "restore"},
-                    saveAsImage : {show: true, title: "save as image"}
-                }
-            },
-            calculable : true,
-            xAxis : [
+            toolbox: false,
+            calculable: true,
+            xAxis: [
                 {
-                    type : 'value'
+                    type: 'value'
                 }
             ],
-            yAxis : [
+            yAxis: [
                 {
-                    type : 'category',
-                    axisTick : {show: false},
-                    data : ['Mon.','Tue.','Wed.','Thu.','Fri.','Sat.','Sun.']
+                    type: 'category',
+                    axisTick: {show: false},
+                    data: ['一月', '二月', '三月', '四月', '五月', '六月', '七月']
                 }
             ],
-            series : [
+            series: [
                 {
-                    name:'Profit',
-                    type:'bar',
-                    itemStyle : { normal: {label : {show: true, position: 'inside'}}},
-                    data:[200, 170, 240, 244, 200, 220, 210]
+                    name: '利润',
+                    type: 'bar',
+                    itemStyle: {normal: {label: {show: true, position: 'inside'}}},
+                    data: [200, 170, 240, 244, 200, 220, 210]
                 },
                 {
-                    name:'Income',
-                    type:'bar',
+                    name: '收入',
+                    type: 'bar',
                     stack: 'Sum',
-                    barWidth : 5,
-                    itemStyle: {normal: {
-                        label : {show: true}
-                    }},
-                    data:[320, 302, 341, 374, 390, 450, 420]
+                    barWidth: 5,
+                    itemStyle: {
+                        normal: {
+                            label: {show: true}
+                        }
+                    },
+                    data: [320, 302, 341, 374, 390, 450, 420]
                 },
                 {
-                    name:'Cost',
-                    type:'bar',
+                    name: '成本',
+                    type: 'bar',
                     stack: 'Sum',
-                    itemStyle: {normal: {
-                        label : {show: true, position: 'left'}
-                    }},
-                    data:[-120, -132, -101, -134, -190, -230, -210]
+                    itemStyle: {
+                        normal: {
+                            label: {show: true, position: 'left'}
+                        }
+                    },
+                    data: [-120, -132, -101, -134, -190, -230, -210]
                 }
             ]
         };
 
         $scope.pie1.options = {
-            title : {
+            title: {
                 text: 'Traffic Source',
-                x:'center'
+                x: 'center'
             },
-            tooltip : {
+            tooltip: {
                 trigger: 'item',
                 formatter: "{a} <br/>{b} : {c} ({d}%)"
             },
             legend: {
-                orient : 'vertical',
-                x : 'left',
-                data:['Direct','Email','Affiliate','Video Ads','Search']
+                orient: 'vertical',
+                x: 'left',
+                data: ['Direct', 'Email', 'Affiliate', 'Video Ads', 'Search']
             },
             toolbox: {
-                show : true,
-                feature : {
-                    restore : {show: true, title: "restore"},
-                    saveAsImage : {show: true, title: "save as image"}
+                show: true,
+                feature: {
+                    restore: {show: true, title: "restore"},
+                    saveAsImage: {show: true, title: "save as image"}
                 }
             },
-            calculable : true,
-            series : [
+            calculable: true,
+            series: [
                 {
-                    name:'Vist source',
-                    type:'pie',
-                    radius : '55%',
+                    name: 'Vist source',
+                    type: 'pie',
+                    radius: '55%',
                     center: ['50%', '60%'],
-                    data:[
-                        {value:335, name:'Direct'},
-                        {value:310, name:'Email'},
-                        {value:234, name:'Affiliate'},
-                        {value:135, name:'Video Ads'},
-                        {value:1548, name:'Search'}
+                    data: [
+                        {value: 335, name: 'Direct'},
+                        {value: 310, name: 'Email'},
+                        {value: 234, name: 'Affiliate'},
+                        {value: 135, name: 'Video Ads'},
+                        {value: 1548, name: 'Search'}
                     ]
                 }
             ]
         };
         $scope.pie2.options = {
-            tooltip : {
+            tooltip: {
                 trigger: 'item',
                 formatter: "{a} <br/>{b} : {c} ({d}%)"
             },
             legend: {
-                orient : 'vertical',
-                x : 'left',
-                data:['Direct','Email','Affiliate','Video Ads','Search']
+                orient: 'vertical',
+                x: 'left',
+                data: ['Direct', 'Email', 'Affiliate', 'Video Ads', 'Search']
             },
             toolbox: {
-                show : true,
-                feature : {
-                    restore : {show: true, title: "restore"},
-                    saveAsImage : {show: true, title: "save as image"}
+                show: true,
+                feature: {
+                    restore: {show: true, title: "restore"},
+                    saveAsImage: {show: true, title: "save as image"}
                 }
             },
-            calculable : true,
-            series : [
+            calculable: true,
+            series: [
                 {
-                    name:'Traffic source',
-                    type:'pie',
-                    radius : ['50%', '70%'],
-                    itemStyle : {
-                        normal : {
-                            label : {
-                                show : false
+                    name: 'Traffic source',
+                    type: 'pie',
+                    radius: ['50%', '70%'],
+                    itemStyle: {
+                        normal: {
+                            label: {
+                                show: false
                             },
-                            labelLine : {
-                                show : false
+                            labelLine: {
+                                show: false
                             }
                         },
-                        emphasis : {
-                            label : {
-                                show : true,
-                                position : 'center',
-                                textStyle : {
-                                    fontSize : '30',
-                                    fontWeight : 'bold'
+                        emphasis: {
+                            label: {
+                                show: true,
+                                position: 'center',
+                                textStyle: {
+                                    fontSize: '30',
+                                    fontWeight: 'bold'
                                 }
                             }
                         }
                     },
-                    data:[
-                        {value:335, name:'Direct'},
-                        {value:310, name:'Email'},
-                        {value:234, name:'Affiliate'},
-                        {value:135, name:'Video Ads'},
-                        {value:1548, name:'Search'}
+                    data: [
+                        {value: 335, name: 'Direct'},
+                        {value: 310, name: 'Email'},
+                        {value: 234, name: 'Affiliate'},
+                        {value: 135, name: 'Video Ads'},
+                        {value: 1548, name: 'Search'}
                     ]
                 }
             ]
         };
         $scope.pie4.options = {
-            title : {
+            title: {
                 text: 'Nightingale rose diagram',
-                x:'center'
+                x: 'center'
             },
-            tooltip : {
+            tooltip: {
                 trigger: 'item',
                 formatter: "{a} <br/>{b} : {c} ({d}%)"
             },
             legend: {
-                x : 'center',
-                y : 'bottom',
-                data:['rose1','rose2','rose3','rose4','rose5','rose6','rose7','rose8']
+                x: 'center',
+                y: 'bottom',
+                data: ['rose1', 'rose2', 'rose3', 'rose4', 'rose5', 'rose6', 'rose7', 'rose8']
             },
             toolbox: {
-                show : true,
-                feature : {
-                    restore : {show: true, title: "restore"},
-                    saveAsImage : {show: true, title: "save as image"}
+                show: true,
+                feature: {
+                    restore: {show: true, title: "restore"},
+                    saveAsImage: {show: true, title: "save as image"}
                 }
             },
-            calculable : true,
-            series : [
+            calculable: true,
+            series: [
                 {
-                    name:'Radius model',
-                    type:'pie',
-                    radius : [20, 110],
-                    center : ['25%', 200],
-                    roseType : 'radius',
+                    name: 'Radius model',
+                    type: 'pie',
+                    radius: [20, 110],
+                    center: ['25%', 200],
+                    roseType: 'radius',
                     width: '40%',       // for funnel
                     max: 40,            // for funnel
-                    itemStyle : {
-                        normal : {
-                            label : {
-                                show : false
+                    itemStyle: {
+                        normal: {
+                            label: {
+                                show: false
                             },
-                            labelLine : {
-                                show : false
+                            labelLine: {
+                                show: false
                             }
                         },
-                        emphasis : {
-                            label : {
-                                show : true
+                        emphasis: {
+                            label: {
+                                show: true
                             },
-                            labelLine : {
-                                show : true
+                            labelLine: {
+                                show: true
                             }
                         }
                     },
-                    data:[
-                        {value:10, name:'rose1'},
-                        {value:5, name:'rose2'},
-                        {value:15, name:'rose3'},
-                        {value:25, name:'rose4'},
-                        {value:20, name:'rose5'},
-                        {value:35, name:'rose6'},
-                        {value:30, name:'rose7'},
-                        {value:40, name:'rose8'}
+                    data: [
+                        {value: 10, name: 'rose1'},
+                        {value: 5, name: 'rose2'},
+                        {value: 15, name: 'rose3'},
+                        {value: 25, name: 'rose4'},
+                        {value: 20, name: 'rose5'},
+                        {value: 35, name: 'rose6'},
+                        {value: 30, name: 'rose7'},
+                        {value: 40, name: 'rose8'}
                     ]
                 },
                 {
-                    name:'Area model',
-                    type:'pie',
-                    radius : [30, 110],
-                    center : ['75%', 200],
-                    roseType : 'area',
+                    name: 'Area model',
+                    type: 'pie',
+                    radius: [30, 110],
+                    center: ['75%', 200],
+                    roseType: 'area',
                     x: '50%',               // for funnel
                     max: 40,                // for funnel
-                    sort : 'ascending',     // for funnel
-                    data:[
-                        {value:10, name:'rose1'},
-                        {value:5, name:'rose2'},
-                        {value:15, name:'rose3'},
-                        {value:25, name:'rose4'},
-                        {value:20, name:'rose5'},
-                        {value:35, name:'rose6'},
-                        {value:30, name:'rose7'},
-                        {value:40, name:'rose8'}
+                    sort: 'ascending',     // for funnel
+                    data: [
+                        {value: 10, name: 'rose1'},
+                        {value: 5, name: 'rose2'},
+                        {value: 15, name: 'rose3'},
+                        {value: 25, name: 'rose4'},
+                        {value: 20, name: 'rose5'},
+                        {value: 35, name: 'rose6'},
+                        {value: 30, name: 'rose7'},
+                        {value: 40, name: 'rose8'}
                     ]
                 }
             ]
@@ -775,66 +772,66 @@
         };
 
         $scope.scatter1.options = {
-            title : {
+            title: {
                 text: 'Height and weight distribution',
                 subtext: 'Data: Heinz  2003'
             },
-            tooltip : {
+            tooltip: {
                 trigger: 'axis',
-                showDelay : 0,
-                formatter : function (params) {
+                showDelay: 0,
+                formatter: function (params) {
                     if (params.value.length > 1) {
                         return params.seriesName + ' :<br/>'
-                           + params.value[0] + 'cm ' 
-                           + params.value[1] + 'kg ';
+                            + params.value[0] + 'cm '
+                            + params.value[1] + 'kg ';
                     }
                     else {
                         return params.seriesName + ' :<br/>'
-                           + params.name + ' : '
-                           + params.value + 'kg ';
+                            + params.name + ' : '
+                            + params.value + 'kg ';
                     }
-                },  
-                axisPointer:{
+                },
+                axisPointer: {
                     show: true,
-                    type : 'cross',
+                    type: 'cross',
                     lineStyle: {
-                        type : 'dashed',
-                        width : 1
+                        type: 'dashed',
+                        width: 1
                     }
                 }
             },
             legend: {
-                data:['Femail','Male']
+                data: ['Femail', 'Male']
             },
             toolbox: {
-                show : true,
-                feature : {
-                    restore : {show: true, title: "restore"},
-                    saveAsImage : {show: true, title: "save as image"}
+                show: true,
+                feature: {
+                    restore: {show: true, title: "restore"},
+                    saveAsImage: {show: true, title: "save as image"}
                 }
             },
-            xAxis : [
+            xAxis: [
                 {
-                    type : 'value',
-                    scale:true,
-                    axisLabel : {
+                    type: 'value',
+                    scale: true,
+                    axisLabel: {
                         formatter: '{value} cm'
                     }
                 }
             ],
-            yAxis : [
+            yAxis: [
                 {
-                    type : 'value',
-                    scale:true,
-                    axisLabel : {
+                    type: 'value',
+                    scale: true,
+                    axisLabel: {
                         formatter: '{value} kg'
                     }
                 }
             ],
-            series : [
+            series: [
                 {
-                    name:'Femail',
-                    type:'scatter',
+                    name: 'Femail',
+                    type: 'scatter',
                     data: [[161.2, 51.6], [167.5, 59.0], [159.5, 49.2], [157.0, 63.0], [155.8, 53.6],
                         [170.0, 59.0], [159.1, 47.6], [166.0, 69.8], [176.2, 66.8], [160.2, 75.2],
                         [172.5, 55.2], [170.9, 54.2], [172.9, 62.5], [153.4, 42.0], [160.0, 50.0],
@@ -888,21 +885,21 @@
                         [169.5, 67.3], [160.0, 75.5], [172.7, 68.2], [162.6, 61.4], [157.5, 76.8],
                         [176.5, 71.8], [164.4, 55.5], [160.7, 48.6], [174.0, 66.4], [163.8, 67.3]
                     ],
-                    markPoint : {
-                        data : [
-                            {type : 'max', name: 'Max'},
-                            {type : 'min', name: 'Min'}
+                    markPoint: {
+                        data: [
+                            {type: 'max', name: 'Max'},
+                            {type: 'min', name: 'Min'}
                         ]
                     },
-                    markLine : {
-                        data : [
-                            {type : 'average', name: 'Average'}
+                    markLine: {
+                        data: [
+                            {type: 'average', name: 'Average'}
                         ]
                     }
                 },
                 {
-                    name:'Male',
-                    type:'scatter',
+                    name: 'Male',
+                    type: 'scatter',
                     data: [[174.0, 65.6], [175.3, 71.8], [193.5, 80.7], [186.5, 72.6], [187.2, 78.8],
                         [181.5, 74.8], [184.0, 86.4], [184.5, 78.4], [175.0, 62.0], [184.0, 81.6],
                         [180.0, 76.6], [177.8, 83.6], [192.0, 90.0], [176.0, 74.6], [174.0, 71.0],
@@ -954,24 +951,25 @@
                         [170.2, 62.3], [177.8, 82.7], [179.1, 79.1], [190.5, 98.2], [177.8, 84.1],
                         [180.3, 83.2], [180.3, 83.2]
                     ],
-                    markPoint : {
-                        data : [
-                            {type : 'max', name: 'Max'},
-                            {type : 'min', name: 'Min'}
+                    markPoint: {
+                        data: [
+                            {type: 'max', name: 'Max'},
+                            {type: 'min', name: 'Min'}
                         ]
                     },
-                    markLine : {
-                        data : [
-                            {type : 'average', name: 'Average'}
+                    markLine: {
+                        data: [
+                            {type: 'average', name: 'Average'}
                         ]
                     }
                 }
             ]
         };
-        function random(){
+        function random() {
             var r = Math.round(Math.random() * 100);
             return (r * (r % 2 == 0 ? 1 : -1));
         }
+
         function randomDataArray() {
             var d = [];
             var len = 100;
@@ -979,61 +977,62 @@
                 d.push([
                     random(),
                     random(),
-                    Math.abs(random()),
+                    Math.abs(random())
                 ]);
             }
             return d;
-        }        
+        }
+
         $scope.scatter2.options = {
-            tooltip : {
+            tooltip: {
                 trigger: 'axis',
-                showDelay : 0,
-                axisPointer:{
+                showDelay: 0,
+                axisPointer: {
                     show: true,
-                    type : 'cross',
+                    type: 'cross',
                     lineStyle: {
-                        type : 'dashed',
-                        width : 1
+                        type: 'dashed',
+                        width: 1
                     }
                 }
             },
             legend: {
-                data:['scatter1','scatter2']
+                data: ['scatter1', 'scatter2']
             },
             toolbox: {
-                show : true,
-                feature : {
-                    restore : {show: true, title: "restore"},
-                    saveAsImage : {show: true, title: "save as image"}
+                show: true,
+                feature: {
+                    restore: {show: true, title: "restore"},
+                    saveAsImage: {show: true, title: "save as image"}
                 }
             },
-            xAxis : [
+            xAxis: [
                 {
-                    type : 'value',
+                    type: 'value',
                     splitNumber: 4,
                     scale: true
                 }
             ],
-            yAxis : [
+            yAxis: [
                 {
-                    type : 'value',
+                    type: 'value',
                     splitNumber: 4,
                     scale: true
                 }
             ],
-            series : [
+            series: [
                 {
-                    name:'scatter1',
-                    type:'scatter',
-                    symbolSize: function (value){
+                    name: 'scatter1',
+                    type: 'scatter',
+                    symbolSize: function (value) {
                         return Math.round(value[2] / 5);
                     },
                     data: randomDataArray()
                 },
                 {
-                    name:'scatter2',
-                    type:'scatter',
-                    symbolSize: function (value){
+                    name: 'scatter2',
+                    type: 'scatter',
+                    symbolSize: function (value) {
                         return Math.round(value[2] / 5);
                     },
                     data: randomDataArray()
@@ -1042,85 +1041,85 @@
         };
 
         $scope.radar1.options = {
-            title : {
+            title: {
                 text: 'Budget vs spending'
             },
-            tooltip : {
+            tooltip: {
                 trigger: 'axis'
             },
             legend: {
-                orient : 'vertical',
-                x : 'right',
-                y : 'bottom',
-                data:['Allocated Budget','Actual Spending']
+                orient: 'vertical',
+                x: 'right',
+                y: 'bottom',
+                data: ['Allocated Budget', 'Actual Spending']
             },
             toolbox: {
-                show : true,
-                feature : {
-                    restore : {show: true, title: "restore"},
-                    saveAsImage : {show: true, title: "save as image"}
+                show: true,
+                feature: {
+                    restore: {show: true, title: "restore"},
+                    saveAsImage: {show: true, title: "save as image"}
                 }
             },
-            polar : [
-               {
-                   indicator : [
-                       { text: 'sales', max: 6000},
-                       { text: 'dministration', max: 16000},
-                       { text: 'Information Techology', max: 30000},
-                       { text: 'Customer Support', max: 38000},
-                       { text: 'Development', max: 52000},
-                       { text: 'Marketing', max: 25000}
+            polar: [
+                {
+                    indicator: [
+                        {text: 'sales', max: 6000},
+                        {text: 'dministration', max: 16000},
+                        {text: 'Information Techology', max: 30000},
+                        {text: 'Customer Support', max: 38000},
+                        {text: 'Development', max: 52000},
+                        {text: 'Marketing', max: 25000}
                     ]
                 }
             ],
-            calculable : true,
-            series : [
+            calculable: true,
+            series: [
                 {
                     name: 'Budget vs spending',
                     type: 'radar',
-                    data : [
+                    data: [
                         {
-                            value : [4300, 10000, 28000, 35000, 50000, 19000],
-                            name : 'Allocated Budget'
+                            value: [4300, 10000, 28000, 35000, 50000, 19000],
+                            name: 'Allocated Budget'
                         },
-                         {
-                            value : [5000, 14000, 28000, 31000, 42000, 21000],
-                            name : 'Actual Spending'
+                        {
+                            value: [5000, 14000, 28000, 31000, 42000, 21000],
+                            name: 'Actual Spending'
                         }
                     ]
                 }
             ]
         };
         $scope.radar2.options = {
-            tooltip : {
+            tooltip: {
                 trigger: 'axis'
             },
             legend: {
-                x : 'center',
-                data:['Ronaldo','Andriy Shevchenko']
+                x: 'center',
+                data: ['Ronaldo', 'Andriy Shevchenko']
             },
             toolbox: {
-                show : true,
-                feature : {
-                    restore : {show: true, title: "restore"},
-                    saveAsImage : {show: true, title: "save as image"}
+                show: true,
+                feature: {
+                    restore: {show: true, title: "restore"},
+                    saveAsImage: {show: true, title: "save as image"}
                 }
             },
-            calculable : true,
-            polar : [
+            calculable: true,
+            polar: [
                 {
-                    indicator : [
-                        {text : 'Attack', max  : 100},
-                        {text : 'Guard', max  : 100},
-                        {text : 'Physical', max  : 100},
-                        {text : 'Speed', max  : 100},
-                        {text : 'Strength', max  : 100},
-                        {text : 'Skill', max  : 100}
+                    indicator: [
+                        {text: 'Attack', max: 100},
+                        {text: 'Guard', max: 100},
+                        {text: 'Physical', max: 100},
+                        {text: 'Speed', max: 100},
+                        {text: 'Strength', max: 100},
+                        {text: 'Skill', max: 100}
                     ],
-                    radius : 130
+                    radius: 130
                 }
             ],
-            series : [
+            series: [
                 {
                     name: 'Full of live data',
                     type: 'radar',
@@ -1131,14 +1130,14 @@
                             }
                         }
                     },
-                    data : [
+                    data: [
                         {
-                            value : [97, 42, 88, 94, 90, 86],
-                            name : 'Andriy Shevchenko'
+                            value: [97, 42, 88, 94, 90, 86],
+                            name: 'Andriy Shevchenko'
                         },
                         {
-                            value : [97, 32, 74, 95, 88, 92],
-                            name : 'Ronaldo'
+                            value: [97, 32, 74, 95, 88, 92],
+                            name: 'Ronaldo'
                         }
                     ]
                 }
@@ -1146,36 +1145,34 @@
         };
 
         $scope.gauge1.options = {
-            tooltip : {
+            tooltip: {
                 formatter: "{a} <br/>{b} : {c}%"
             },
             toolbox: {
-                show : true,
-                feature : {
-                    restore : {show: true, title: "restore"},
-                    saveAsImage : {show: true, title: "save as image"}
+                show: true,
+                feature: {
+                    restore: {show: true, title: "restore"},
+                    saveAsImage: {show: true, title: "save as image"}
                 }
             },
-            series : [
+            series: [
                 {
-                    name:'Business metric',
-                    type:'gauge',
-                    detail : {formatter:'{value}%'},
-                    data:[{value: 50, name: 'Completion'}]
+                    name: 'Business metric',
+                    type: 'gauge',
+                    detail: {formatter: '{value}%'},
+                    data: [{value: 50, name: 'Completion'}]
                 }
             ]
         };
 
-
-
         $scope.chord1.options = {
-            title : {
+            title: {
                 text: 'Test Data',
                 subtext: 'From d3.js',
-                x:'right',
-                y:'bottom'
+                x: 'right',
+                y: 'bottom'
             },
-            tooltip : {
+            tooltip: {
                 trigger: 'item',
                 formatter: function (params) {
                     if (params.indicator2) { // is edge
@@ -1186,83 +1183,83 @@
                 }
             },
             toolbox: {
-                show : true,
-                feature : {
-                    restore : {show: true, title: "restore"},
-                    saveAsImage : {show: true, title: "save as image"}
+                show: true,
+                feature: {
+                    restore: {show: true, title: "restore"},
+                    saveAsImage: {show: true, title: "save as image"}
                 }
             },
             legend: {
                 x: 'left',
-                data:['group1','group2', 'group3', 'group4']
+                data: ['group1', 'group2', 'group3', 'group4']
             },
-            series : [
+            series: [
                 {
-                    type:'chord',
-                    sort : 'ascending',
-                    sortSub : 'descending',
-                    showScale : true,
-                    showScaleText : true,
-                    data : [
-                        {name : 'group1'},
-                        {name : 'group2'},
-                        {name : 'group3'},
-                        {name : 'group4'}
+                    type: 'chord',
+                    sort: 'ascending',
+                    sortSub: 'descending',
+                    showScale: true,
+                    showScaleText: true,
+                    data: [
+                        {name: 'group1'},
+                        {name: 'group2'},
+                        {name: 'group3'},
+                        {name: 'group4'}
                     ],
-                    itemStyle : {
-                        normal : {
-                            label : {
-                                show : false
+                    itemStyle: {
+                        normal: {
+                            label: {
+                                show: false
                             }
                         }
                     },
-                    matrix : [
-                        [11975,  5871, 8916, 2868],
-                        [ 1951, 10048, 2060, 6171],
-                        [ 8010, 16145, 8090, 8045],
-                        [ 1013,   990,  940, 6907]
+                    matrix: [
+                        [11975, 5871, 8916, 2868],
+                        [1951, 10048, 2060, 6171],
+                        [8010, 16145, 8090, 8045],
+                        [1013, 990, 940, 6907]
                     ]
                 }
             ]
         };
 
         $scope.funnel1.options = {
-            title : {
+            title: {
                 text: 'Funnel'
             },
-            tooltip : {
+            tooltip: {
                 trigger: 'item',
                 formatter: "{a} <br/>{b} : {c}%"
             },
             toolbox: {
-                show : true,
-                feature : {
-                    restore : {show: true, title: "restore"},
-                    saveAsImage : {show: true, title: "save as image"}
+                show: true,
+                feature: {
+                    restore: {show: true, title: "restore"},
+                    saveAsImage: {show: true, title: "save as image"}
                 }
             },
             legend: {
-                data : ['Display','Click','Vist','Contact','Order']
+                data: ['Display', 'Click', 'Vist', 'Contact', 'Order']
             },
-            calculable : true,
-            series : [
+            calculable: true,
+            series: [
                 {
-                    name:'Funnel',
-                    type:'funnel',
+                    name: 'Funnel',
+                    type: 'funnel',
                     width: '40%',
-                    data:[
-                        {value:60, name:'Vist'},
-                        {value:40, name:'Contact'},
-                        {value:20, name:'Order'},
-                        {value:80, name:'Click'},
-                        {value:100, name:'Display'}
+                    data: [
+                        {value: 60, name: 'Vist'},
+                        {value: 40, name: 'Contact'},
+                        {value: 20, name: 'Order'},
+                        {value: 80, name: 'Click'},
+                        {value: 100, name: 'Display'}
                     ]
                 },
                 {
-                    name:'Pyramid',
-                    type:'funnel',
-                    x : '50%',
-                    sort : 'ascending',
+                    name: 'Pyramid',
+                    type: 'funnel',
+                    x: '50%',
+                    sort: 'ascending',
                     itemStyle: {
                         normal: {
                             label: {
@@ -1270,15 +1267,15 @@
                             }
                         }
                     },
-                    data:[
-                        {value:60, name:'Vist'},
-                        {value:40, name:'Contact'},
-                        {value:20, name:'Order'},
-                        {value:80, name:'Click'},
-                        {value:100, name:'Display'}
+                    data: [
+                        {value: 60, name: 'Vist'},
+                        {value: 40, name: 'Contact'},
+                        {value: 20, name: 'Order'},
+                        {value: 80, name: 'Click'},
+                        {value: 100, name: 'Display'}
                     ]
                 }
             ]
         };
-    }    
-})(); 
+    }
+})();

@@ -8,16 +8,16 @@
     function appConfig() {
         var pageTransitionOpts = [
             {
-                name: 'Fade up',
+                name: '渐入',
                 "class": 'animate-fade-up'
             }, {
-                name: 'Scale up',
+                name: '放大',
                 "class": 'ainmate-scale-up'
             }, {
-                name: 'Slide in from right',
+                name: '从右侧滑入',
                 "class": 'ainmate-slide-in-right'
             }, {
-                name: 'Flip Y',
+                name: '左右翻转',
                 "class": 'animate-flip-y'
             }
         ];
@@ -33,7 +33,7 @@
             fixedHeader: true,                              // Boolean: true, false
             fixedSidebar: true,                             // Boolean: true, false
             pageTransition: pageTransitionOpts[0],          // Object: 0, 1, 2, 3 and build your own
-            skin: '31'                                      // String: 11,12,13,14,15,16; 21,22,23,24,25,26; 31,32,33,34,35,36
+            skin: '13'                                      // String: 11,12,13,14,15,16; 21,22,23,24,25,26; 31,32,33,34,35,36
         };
         var color = {
             primary:    '#009688',
@@ -57,16 +57,15 @@
         var cyanAlt = $mdThemingProvider.extendPalette('cyan', {
             'contrastLightColors': '500 600 700 800 900',
             'contrastStrongLightColors': '500 600 700 800 900'
-        })
+        });
         var lightGreenAlt = $mdThemingProvider.extendPalette('light-green', {
             'contrastLightColors': '500 600 700 800 900',
             'contrastStrongLightColors': '500 600 700 800 900'
-        })
+        });
 
         $mdThemingProvider
             .definePalette('cyanAlt', cyanAlt)
             .definePalette('lightGreenAlt', lightGreenAlt);
-
 
         $mdThemingProvider.theme('default')
             .primaryPalette('teal', {
@@ -80,5 +79,4 @@
             })
             .backgroundPalette('grey');
     }
-
 })();

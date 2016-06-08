@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="44111662-f042-4a04-a4fa-9e6ec1b71430" name="zhaogubama.com" url="http://zhaogubama.com">
-        <fileTransfer host="zhaogubama.com" port="22" accessType="SFTP" password="dff3dfd3dfccdf9bdf93df92df9fdf9bdf9bdf98df92" username="root">
+      <webServer id="44111662-f042-4a04-a4fa-9e6ec1b71430" name="zhaogubama.com" url="http://139.129.201.73">
+        <fileTransfer host="139.129.201.73" port="22" accessType="SFTP" password="dff3dfd3dfccdf9bdf93df92df9fdf9bdf9bdf98df92" username="root">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>

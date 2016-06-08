@@ -12,8 +12,16 @@
                 'form/elements', 'form/layouts', 'form/validation', 'form/wizard',
                 'chart/echarts', 'chart/echarts-line', 'chart/echarts-bar', 'chart/echarts-pie', 'chart/echarts-scatter', 'chart/echarts-more',
                 'page/404', 'page/500', 'page/blank', 'page/forgot-password', 'page/invoice', 'page/lock-screen', 'page/profile', 'page/signin', 'page/signup',
-                'app/calendar'
-            ]
+                'app/calendar',
+                'beds/beds', 'beds/bed',
+                'financials/payments',
+                'hr/employees', 'hr/employee',
+                'members/members', 'members/member',
+                'promotions/wechat', 'promotions/bookings',
+                'reception/visit',
+                'statistics/financials', 'statistics/beds', 'statistics/members', 'statistics/hr',
+                'system/users', 'system/privileges', 'system/settings', 'system/logs'
+            ];
 
             setRoutes = function(route) {
                 var config, url;
@@ -34,13 +42,10 @@
                 .when('/', '/dashboard')
                 .otherwise('/dashboard');
 
-
             $stateProvider.state('dashboard', {
                 url: '/dashboard',
                 templateUrl: 'app/dashboard/dashboard.html'
             });
-
         }]
     );
-
-})(); 
+})();

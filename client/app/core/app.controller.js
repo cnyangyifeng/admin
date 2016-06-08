@@ -2,15 +2,15 @@
     'use strict';
 
     angular.module('app')
-    .controller('AppCtrl', [ '$scope', '$rootScope', '$state', '$document', 'appConfig', AppCtrl]) // overall control
-    
+        .controller('AppCtrl', ['$scope', '$rootScope', '$state', '$document', 'appConfig', AppCtrl]); // overall control
+
     function AppCtrl($scope, $rootScope, $state, $document, appConfig) {
 
         $scope.pageTransitionOpts = appConfig.pageTransitionOpts;
         $scope.main = appConfig.main;
         $scope.color = appConfig.color;
 
-        $scope.$watch('main', function(newVal, oldVal) {
+        $scope.$watch('main', function (newVal, oldVal) {
             // if (newVal.menu !== oldVal.menu || newVal.layout !== oldVal.layout) {
             //     $rootScope.$broadcast('layout:changed');
             // }
@@ -36,10 +36,8 @@
             }
         }, true);
 
-
         $rootScope.$on("$stateChangeSuccess", function (event, currentRoute, previousRoute) {
             $document.scrollTo(0, 0);
         });
     }
-
-})(); 
+})();

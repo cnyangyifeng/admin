@@ -20,7 +20,6 @@
         $scope.setLang = setLang;
         $scope.getFlag = getFlag;
 
-
         function setLang(lang) {
             switch (lang) {
                 case 'English':
@@ -31,7 +30,7 @@
                     break;
             }
             return $scope.lang = lang;
-        };
+        }
 
         function getFlag() {
             var lang;
@@ -44,6 +43,6 @@
                     return 'flags-china';
                     break;
             }
-        };
+        }
     }
 })();

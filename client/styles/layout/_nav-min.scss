@@ -1,10 +1,8 @@
 @media (min-width: $screen-sm) {
-
     .app.nav-collapsed-min {
-
-        // default
+        // Default
         .slimScrollDiv {
-            overflow: visible !important; // overrides slimScroll plugin
+            overflow: visible !important; // Overrides slimScroll plugin
             height: auto !important;
 
             .slimScrollBar,
@@ -24,8 +22,10 @@
         #nav-wrapper {
             overflow: visible !important;
         }
+
         #nav {
             overflow: visible !important;
+
             > li {
                 // width: 50px;
                 &.li-small {
@@ -33,6 +33,7 @@
                         font-size: 12px;
                     }
                 }
+
                 > a {
                     padding: 15px 15px;
                     text-align: center;
@@ -41,6 +42,7 @@
                         margin: 0;
                         font-size: 22px;
                     }
+
                     > span {
                         display: none;
                         // opacity: 0;

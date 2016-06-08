@@ -8,7 +8,7 @@ body {
         background: none;
     }
 
-    // when it's normal nav
+    // When it's normal nav
     @media (min-width: $screen-sm) {
         .page-signin,
         .page-signup,
@@ -17,7 +17,8 @@ body {
             margin-right: 220px;
         }
     }
-    // when it's collapsed nav
+
+    // When it's collapsed nav
     &.nav-collapsed-min {
         @media (min-width: $screen-sm) {
             .page-signin,
@@ -28,7 +29,8 @@ body {
             }
         }
     }
-    // when it's horizontal nav
+
+    // When it's horizontal nav
     .nav-horizontal + .content-container {
         @media (min-width: $screen-sm) {
             .page-signin,
@@ -41,9 +43,8 @@ body {
     }
 }
 
-// fullscreen, hide header and sidebar
+// Fullscreen, hide header and sidebar
 .body-wide {
-
     #header,
     #nav-container {
         display: none;
@@ -68,7 +69,6 @@ body {
         // padding-bottom: 50px;
     }
 
-    //
     &.on-canvas .main-container #content {
         margin-left: 0;
         margin-right: 0;

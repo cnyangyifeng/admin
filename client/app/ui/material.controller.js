@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-    
+
     angular
         .module('app.ui')
         .controller('ChipsBasicDemoCtrl', ChipsBasicDemoCtrl)
@@ -90,7 +90,6 @@
             });
         };
 
-
         // Open From Close To
         $scope.openOffscreen = function() {
             $mdDialog.show(
@@ -110,7 +109,7 @@
                         left: 1500
                     })
             );
-        };        
+        };
     }
     function DialogController($scope, $mdDialog) {
         $scope.hide = function() {
@@ -182,7 +181,7 @@
                 self.modes[j] = 'indeterminate';
             }
             if ( counter++ % 4 == 0 ) j++;
-        }, 100, 0, true);        
+        }, 100, 0, true);
     }
 
     function ProgressLinearDemo($scope, $interval) {
@@ -285,7 +284,7 @@
     function ToastCustomDemo ($scope, $mdToast) {
         $scope.closeToast = function() {
             $mdToast.hide();
-        };        
+        };
     }
 
     function TooltipDemo($scope) {
@@ -298,7 +297,7 @@
             if (val && val.length ) {
                 $scope.demo.showTooltip = true;
             }
-        })        
+        })
     }
 
     function SubheaderDemo($scope) {
@@ -380,13 +379,13 @@
                 who: 'Min Li Chan',
                 when: '3:08PM',
                 notes: " I'll be in your neighborhood doing errands"
-            },
-        ];     
+            }
+        ];
     }
 
     function SelectDemo() {
         var self = this;
-        
+
         self.userState = '';
         self.states = ('AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS ' +
             'MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI ' +
@@ -398,6 +397,7 @@
             "large (16-inch)",
             "insane (42-inch)"
         ];
+
         self.toppings = [
             { category: 'meat', name: 'Pepperoni' },
             { category: 'meat', name: 'Sausage' },
@@ -408,7 +408,5 @@
             { category: 'veg', name: 'Green Pepper' },
             { category: 'veg', name: 'Green Olives' }
         ];
-
     }
-
 })();

@@ -3,7 +3,7 @@
         background-color: $dark;
         -webkit-background-size: cover;
         -moz-background-size: cover;
-        background-size: cover; 
+        background-size: cover;
     // }
 }
 
@@ -16,7 +16,7 @@
         padding: 45px 10px 0;
         @media (min-width:$screen-sm) {
             padding: 100px 0 0;
-        } 
+        }
     }
 
     .err {
@@ -31,7 +31,7 @@
             text-shadow: 2px 2px 5px rgba(0,0,0,.2);
             @media (min-width:$screen-sm) {
                 font-size: 180px;
-            } 
+            }
         }
 
         h2 {
@@ -43,7 +43,7 @@
             text-transform: uppercase;
             @media (min-width:$screen-sm) {
                 font-size: 36px;
-            } 
+            }
         }
     }
 
@@ -54,7 +54,7 @@
     .btn-goback {
         color: $reverse;
         color: rgba(255,255,255,.8);
-        background-color: transparent; 
+        background-color: transparent;
         border-color: $reverse;
         border-color: rgba(255,255,255,.8);
 
@@ -78,5 +78,4 @@
         bottom: 20px;
         width: 100%;
     }
-
 }

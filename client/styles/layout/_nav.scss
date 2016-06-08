@@ -11,7 +11,6 @@
     }
 }
 
-//
 .nav-container {
     .md-button {
         text-align: left;
@@ -19,11 +18,11 @@
         text-transform: none;
         border-radius: 0;
     }
+
     .nav {
         margin: 0;
         padding: 0;
         -webkit-overflow-scrolling: touch;
-        -webkit-overflow-scrolling: -blackberry-touch;
 
         .nav-title {
             margin: 15px 15px 10px;
@@ -33,13 +32,11 @@
 
         .nav-divider {
             margin: 10px 0 10px 15px;
-            border-width: 1px;
-            border-style: solid;
-            border-color: transparent;
+            border: 1px solid transparent;
         }
 
-        >li>a>i,
-        >li>a>.nav-icon {
+        > li > a > i,
+        > li > a > .nav-icon {
             display: inline-block;
             margin-right: 10px;
             width: 20px;
@@ -59,17 +56,19 @@
             }
         }
 
-        >li {
+        > li {
             position: relative;
             margin: 0;
             text-align: left;
             font-weight: bold;
             transition: all $nav-transition_duration ease-in-out;
+
             &.open {
                 .icon-has-ul {
                     transform: rotate(180deg);
                 }
             }
+
             &.li-small {
                 font-size: 12px;
                 font-weight: normal;
@@ -85,9 +84,7 @@
                 border-top: 0;
             }
 
-
-
-            >a {
+            > a {
                 position: relative;
                 white-space: nowrap;
                 display: block;
@@ -100,7 +97,8 @@
                     right: 8px;
                 }
 
-                > .icon-has-ul { // icon for default vertical nav
+                // Icon for default vertical nav
+                > .icon-has-ul {
                     // float: right;
                     // margin-right: 0;
                     position: absolute;
@@ -112,14 +110,13 @@
                 }
             }
 
-            > .icon-has-ul-h { // icon for horizontal nav
+            // Icon for horizontal nav
+            > .icon-has-ul-h {
                 display: none;
             }
-
-
         }
 
-        // sub menu
+        // Sub-menu
         ul {
             display: none;
 
@@ -145,9 +142,10 @@
                     }
 
                     > i {
-                        font-size: 4px;
+                        // font-size: 4px;
                         line-height: 16px;
                         margin-right: 16px;
+                        width: 16px;
                         vertical-align: middle;
                     }
 
@@ -163,5 +161,5 @@
 }
 
 .nav-vertical {
-    box-shadow: 2px 0 2px 0 rgba(0,0,0,0.12);
+    box-shadow: 2px 0 2px 0 rgba(0, 0, 0, 0.12);
 }
