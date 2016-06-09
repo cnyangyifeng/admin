@@ -4,26 +4,23 @@
     angular.module('app.page')
         .directive('customPage', customPage);
 
-
-    // add class for specific pages to achieve fullscreen, custom background etc.
+    // Add class for specific pages to achieve fullscreen, custom background etc.
     function customPage() {
-        var directive = {
+        return {
             restrict: 'A',
-            controller: ['$scope', '$element', '$location', customPageCtrl]
+            controller: ['$scope', '$element', '$location', CustomPageCtrl]
         };
 
-        return directive;
-
-        function customPageCtrl($scope, $element, $location) {
+        function CustomPageCtrl($scope, $element, $location) {
             var addBg, path;
 
-            path = function() {
+            path = function () {
                 return $location.path();
             };
 
-            addBg = function(path) {
+            addBg = function (path) {
                 $element.removeClass('on-canvas');
-                $element.removeClass('body-wide body-err body-lock body-auth');
+                $element.removeClass('body-wide body-err body-auth');
                 switch (path) {
                     case '/404':
                     case '/page/404':
@@ -33,22 +30,19 @@
                     case '/page/signup':
                     case '/page/forgot-password':
                         return $element.addClass('body-wide body-auth');
-                    case '/page/lock-screen':
-                        return $element.addClass('body-wide body-lock');
                 }
             };
 
             addBg($location.path());
 
-            $scope.$watch(path, function(newVal, oldVal) {
+            $scope.$watch(path, function (newVal, oldVal) {
                 if (newVal === oldVal) {
                     return;
                 }
                 return addBg($location.path());
             });
-        }        
+        }
     }
- 
-})(); 
+})();
 
 

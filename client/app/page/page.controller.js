@@ -2,15 +2,15 @@
     'use strict';
 
     angular.module('app.page')
-    .controller('invoiceCtrl', ['$scope', '$window', invoiceCtrl])
-    .controller('authCtrl', ['$scope', '$window', '$location', authCtrl]);
+        .controller('InvoiceCtrl', ['$scope', '$window', InvoiceCtrl])
+        .controller('AuthCtrl', ['$scope', '$window', '$location', AuthCtrl]);
 
-    function invoiceCtrl($scope, $window) {
+    function InvoiceCtrl($scope, $window) {
         var printContents, originalContents, popupWin;
-        
-        $scope.printInvoice = function() {
+
+        $scope.printInvoice = function () {
             printContents = document.getElementById('invoice').innerHTML;
-            originalContents = document.body.innerHTML;        
+            originalContents = document.body.innerHTML;
             popupWin = window.open();
             popupWin.document.open();
             popupWin.document.write('<html><head><link rel="stylesheet" type="text/css" href="styles/main.css" /></head><body onload="window.print()">' + printContents + '</html>');
@@ -18,25 +18,24 @@
         }
     }
 
-    function authCtrl($scope, $window, $location) {
-        $scope.login = function() {
+    function AuthCtrl($scope, $window, $location) {
+        $scope.login = function () {
+            $location.url('/')
+        };
+
+        $scope.signup = function () {
+            $location.url('/')
+        };
+
+        $scope.reset = function () {
+            $location.url('/')
+        };
+
+        $scope.unlock = function () {
             $location.url('/')
         }
-
-        $scope.signup = function() {
-            $location.url('/')
-        }
-
-        $scope.reset =    function() {
-            $location.url('/')
-        }
-
-        $scope.unlock =    function() {
-            $location.url('/')
-        }     
     }
-
-})(); 
+})();
 
 
 

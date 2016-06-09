@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" promptOnRemoteOverwrite="CHECK_CONTENT" serverName="zhaogubama.com" deleteMissingItems="true" traceLevel="DETAILS" autoUploadExternalChanges="true" notifyRemoteChanges="true" showNewOnSourceInSync="false">
+  <component name="PublishConfigData" autoUpload="Always" promptOnRemoteOverwrite="CHECK_CONTENT" serverName="zhaogubama.com" deleteMissingItems="true" createEmptyFolders="true" traceLevel="DETAILS" autoUploadExternalChanges="true" notifyRemoteChanges="true" showNewOnSourceInSync="false">
     <serverData>
       <paths name="zhaogubama.com">
         <serverdata>

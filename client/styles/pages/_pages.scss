@@ -21,7 +21,6 @@
     }
 }
 
-//
 .non-display {
     display: none;
 }
@@ -29,7 +28,8 @@
 .page {
     padding: 15px 30px;
 
-    > .ui-section:last-child {
+    // > .ui-section:last-child {
+    > .ui-section {
         margin-bottom: 0;
     }
 }

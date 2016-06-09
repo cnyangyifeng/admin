@@ -7,7 +7,7 @@
     <meta name="description" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="author" content="Eric Yang">
-    <title>养老管理平台</title>
+    <title>机构管理平台</title>
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Needs images, font... therefore can not be part of main.css -->
@@ -31,7 +31,7 @@
       data-ng-controller="AppCtrl"
       data-ng-class="{ 'layout-boxed': main.layout === 'boxed',
                        'nav-collapsed-min': main.isMenuCollapsed
-          } ">
+      } ">
 
 <div id="loader-container"></div>
 
@@ -109,27 +109,29 @@
 <script src="app/core/core.module.js"></script>
 <script src="app/form/form.module.js"></script>
 <script src="app/form/formValidation.module.js"></script>
+<script src="app/layout/layout.module.js"></script>
+<script src="app/members/members.module.js"></script>
 <script src="app/page/page.module.js"></script>
 <script src="app/table/table.module.js"></script>
-<script src="app/layout/layout.module.js"></script>
 <script src="app/ui/ui.module.js"></script>
 <script src="app/chart/echarts.controller.js"></script>
-<script src="app/dashboard/dashboard.controller.js"></script>
 <script src="app/core/app.config.js"></script>
 <script src="app/core/app.controller.js"></script>
 <script src="app/core/config.route.js"></script>
 <script src="app/core/i18n.js"></script>
+<script src="app/dashboard/dashboard.controller.js"></script>
 <script src="app/form/form.controller.js"></script>
 <script src="app/form/form.directive.js"></script>
 <script src="app/form/formValidation.controller.js"></script>
 <script src="app/form/wizard.controller.js"></script>
-<script src="app/page/page.controller.js"></script>
-<script src="app/page/page.directive.js"></script>
-<script src="app/table/table.controller.js"></script>
 <script src="app/layout/layout.controller.js"></script>
 <script src="app/layout/layout.diretive.js"></script>
 <script src="app/layout/loader.js"></script>
 <script src="app/layout/sidebar.directive.js"></script>
+<script src="app/members/members.controller.js"></script>
+<script src="app/page/page.controller.js"></script>
+<script src="app/page/page.directive.js"></script>
+<script src="app/table/table.controller.js"></script>
 <script src="app/ui/material.controller.js"></script>
 <script src="app/ui/ui.controller.js"></script>
 <script src="app/ui/ui.directive.js"></script>

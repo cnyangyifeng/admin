@@ -13,12 +13,14 @@
         , 'app.page'
         , 'app.table'
 
+        // Business modules
+        , 'app.members'
+
         // 3rd party feature modules
         , 'mgo-angular-wizard'
         , 'ui.tree'
         , 'ngMap'
         , 'textAngular'
     ]);
-
 })();
 

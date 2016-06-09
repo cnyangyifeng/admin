@@ -7,14 +7,12 @@
         .directive('highlightActive', highlightActive)
         .directive('toggleOffCanvas', toggleOffCanvas);
 
-    // Switch for mini style NAV, realted to 'collapseNav' directive
+    // Switch for mini style nav, realted to 'collapseNav' directive
     function toggleNavCollapsedMin($rootScope) {
-        var directive = {
+        return {
             restrict: 'A',
             link: link
         };
-
-        return directive;
 
         function link(scope, ele, attrs) {
             var app;
@@ -35,12 +33,10 @@
 
     // For accordion/collapse style nav
     function collapseNav() {
-        var directive = {
+        return {
             restrict: 'A',
             link: link
         };
-
-        return directive;
 
         function link(scope, ele, attrs) {
             var $a, $aRest, $app, $lists, $listsRest, $nav, $window, Timer, prevWidth, slideTime, updateClass;
@@ -110,12 +106,10 @@
 
     // Add 'active' class to li based on url, muli-level supported, jquery free
     function highlightActive() {
-        var directive = {
+        return {
             restrict: 'A',
             controller: ['$scope', '$element', '$attrs', '$location', highlightActiveCtrl]
         };
-
-        return directive;
 
         function highlightActiveCtrl($scope, $element, $attrs, $location) {
             var highlightActive, links, path;
@@ -155,12 +149,10 @@
 
     // Toggle on-canvas for small screen, with CSS
     function toggleOffCanvas() {
-        var directive = {
+        return {
             restrict: 'A',
             link: link
         };
-
-        return directive;
 
         function link(scope, ele, attrs) {
             ele.on('click', function () {

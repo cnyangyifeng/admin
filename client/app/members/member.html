@@ -1,85 +1,26 @@
-<div class="row ui-section">
-    <div class="col-lg-8 clearfix">
-        <h2 class="section-header">Tabs</h2>
-    </div>
-    <div class="col-md-12">
-        <section class="panel panel-default">
-            <div class="panel-body" data-ng-controller="TabsDemoCtrl">
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="section-header">
-                            <h4>Simple Tabs</h4>
+<div class="page">
+    <div class="row ui-section">
+        <div class="col-lg-8 clearfix">
+            <h2 class="section-header">陶渊明</h2>
+        </div>
+        <div class="col-md-12">
+            <div class="row" data-ng-controller="MemberTabsCtrl" ng-cloak>
+                <div class="col-md-12">
+                    <section class="panel panel-default">
+                        <div class="panel-body no-padding">
+                            <md-tabs md-selected="selectedIndex" md-border-bottom md-autoselect>
+                                <md-tab ng-repeat="tab in tabs" ng-disabled="tab.disabled" label="{{tab.title}}">
+                                    <div class="demo-tab tab{{$index%4}}" style="padding: 25px; text-align: center;">
+                                        <div ng-bind="tab.content"></div>
+                                        <br/>
+                                        <md-button class="md-primary md-raised" ng-click="removeTab(tab)" ng-disabled="tabs.length <= 1">Remove Tab</md-button>
+                                    </div>
+                                </md-tab>
+                            </md-tabs>
                         </div>
-                        <uib-tabset class="ui-tab">
-                            <uib-tab heading="Static title">Static content here. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, quidem, officiis, et ex laudantium sed cupiditate voluptatum libero nobis sit illum voluptates beatae ab et at.</uib-tab>
-                            <uib-tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disable="tab.disabled">
-                                {{tab.content}}
-                            </uib-tab>
-                        </uib-tabset>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="section-header">
-                            <h4>Justified Tabs</h4>
-                        </div>
-                        <uib-tabset justified="true" class="ui-tab">
-                            <uib-tab heading="Justified">Justified content</uib-tab>
-                            <uib-tab heading="SJ">Short Labeled Justified content</uib-tab>
-                            <uib-tab heading="Long Justified">Long Labeled Justified content</uib-tab>
-                        </uib-tabset>
-                    </div>
+                    </section>
                 </div>
-
-                <div class="divider divider-lg"></div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="section-header">
-                            <h4>Horizontal Tabs</h4>
-                        </div>
-                        <div class="ui-tab-container ui-tab-horizontal">
-                            <uib-tabset justified="false" class="ui-tab">
-                                <uib-tab heading="Home dolor">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, aspernatur, eum fugit officiis numquam iste aut illo quos pariatur Eligendi, veniam, accusamus.</p>
-                                    <p>Consectetur adipisicing elit. Reprehenderit enim obcaecati inventore, beatae corporis voluptate, repudiandae voluptatum nesciunt ipsam provident aliquam accusamus assumenda est, veritatis molestias velit non minus laudantium.</p>
-                                </uib-tab>
-                                <uib-tab heading="Quod ea">
-                                    <p>Quod ea vel dolores earum veritatis quae sunt tempore odit molestias sit optio quaerat cupiditate iure repudiandae illum doloremque consectetur incidunt!</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, aspernatur, eum fugit officiis numquam iste aut illo quos pariatur Eligendi, veniam, accusamus.</p>
-                                </uib-tab>
-                                <uib-tab heading="Earum sequi">
-                                    <p>Blanditiis tenetur harum distinctio voluptate asperiores non magnam delectus. Consequatur, deleniti rem magnam possimus necessitatibus iusto suscipit mollitia rerum.</p>
-                                    <p>Quod ea vel dolores earum veritatis quae sunt tempore odit molestias sit optio quaerat cupiditate iure repudiandae illum doloremque consectetur incidunt!</p>
-                                </uib-tab>
-                            </uib-tabset>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="section-header">
-                            <h4>Vertical Tabs</h4>
-                        </div>
-                        <div class="ui-tab-container ui-tab-vertical">
-                            <uib-tabset class="ui-tab">
-                                <uib-tab heading="Home dolor">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, aspernatur, eum fugit officiis numquam iste aut illo quos pariatur Eligendi, veniam, accusamus.</p>
-                                    <p>Consectetur adipisicing elit. Reprehenderit enim obcaecati inventore, beatae corporis voluptate, repudiandae voluptatum nesciunt ipsam provident aliquam accusamus assumenda est, veritatis molestias velit non minus laudantium.</p>
-                                    <p>Blanditiis tenetur harum distinctio voluptate asperiores non magnam delectus. Consequatur, deleniti rem magnam possimus necessitatibus iusto suscipit mollitia rerum.</p>
-                                </uib-tab>
-                                <uib-tab heading="Quod ea">
-                                    <p>Quod ea vel dolores earum veritatis quae sunt tempore odit molestias sit optio quaerat cupiditate iure repudiandae illum doloremque consectetur incidunt!</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, aspernatur, eum fugit officiis numquam iste aut illo quos pariatur Eligendi, veniam, accusamus.</p>
-                                    <p>Consectetur adipisicing elit. Reprehenderit enim obcaecati inventore, beatae corporis voluptate, repudiandae voluptatum nesciunt ipsam provident aliquam accusamus assumenda est, veritatis molestias velit non minus laudantium.</p>
-                                </uib-tab>
-                                <uib-tab heading="Earum sequi">
-                                    <p>Blanditiis tenetur harum distinctio voluptate asperiores non magnam delectus. Consequatur, deleniti rem magnam possimus necessitatibus iusto suscipit mollitia rerum.</p>
-                                    <p>Quod ea vel dolores earum veritatis quae sunt tempore consectetur adipisicing elit. Suscipit, odit molestias sit optio quaerat cupiditate iure repudiandae illum doloremque consectetur incidunt!</p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, aspernatur, eum fugit officiis numquam iste aut illo quos pariatur Eligendi, veniam, accusamus.</p>
-                                </uib-tab>
-                            </uib-tabset>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </section>
+        </div>
     </div>
 </div>
