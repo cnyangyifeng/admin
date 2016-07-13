@@ -1,83 +1,175 @@
-<div class="page page-table" data-ng-controller="TableCtrl">
+<div class="page">
     <div class="row ui-section">
         <div class="col-lg-8 clearfix">
             <h2 class="section-header">床位信息</h2>
         </div>
         <div class="col-md-12">
-            <section class="panel panel-default table-dynamic">
-                <div class="table-filters">
-                    <div class="row">
-                        <div class="col-sm-4 col-xs-6">
-                            <form>
-                                <input type="text"
-                                       placeholder="Search..."
-                                       class="form-control"
-                                       data-ng-model="searchKeywords"
-                                       data-ng-keyup="search()">
+            <div class="row" data-ng-controller="BedsTabsCtrl" ng-cloak>
+                <div class="col-md-12">
+                    <section class="panel panel-default">
+                        <div class="panel-body no-padding">
+                            <md-tabs md-selected="selectedIndex" md-border-bottom md-autoselect md-dynamic-height>
+                                <md-tab ng-repeat="tab in tabs" ng-disabled="tab.disabled" label="{{tab.title}} {{tab.content}}">
+                                    <div class="demo-tab tab{{$index%4}}" style="padding: 25px;">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="ui-tab-container ui-tab-horizontal">
+                                                    <uib-tabset justified="false" class="ui-tab">
+                                                        <uib-tab heading="F1">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="list-group">
+                                                                        <div class="list-group-item">
+                                                                            <h4>101</h4>
+                                                                            <div class="row">
+                                                                                <small class="col-md-4 col-sm-6 col-xs-12"><b>楼层：</b>1层</small>
+                                                                                <small class="col-md-4 col-sm-6 col-xs-12"><b>类型：</b>标准间</small>
+                                                                                <small class="col-md-4 col-sm-6 col-xs-12"><b>床型：</b>单人床1.2米，2张</small>
+                                                                                <small class="col-md-4 col-sm-6 col-xs-12"><b>面积：</b>36㎡</small>
+                                                                                <small class="col-md-4 col-sm-6 col-xs-12"><b>朝向：</b>南</small>
+                                                                                <small class="col-md-4 col-sm-6 col-xs-12"><b>人数：</b>2人</small>
+                                                                            </div>
+                                                                            <div class="divider divider-sm"></div>
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <a href="javascript:;"><img alt="" src="images/bed-1.jpg" class="img img40_40"></a>
+                                                                                    <a href="javascript:;"><img alt="" src="images/bed-2.jpg" class="img img40_40"></a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="divider divider-sm"></div>
+                                                                            <div class="row">
+                                                                                <small class="col-md-12"><b>居住情况：</b></small>
+                                                                            </div>
+                                                                            <div class="divider divider-sm"></div>
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <md-button class="md-fab md-fab-sm" ng-click="isCollapsed = !isCollapsed">彭</md-button>
+                                                                                    <md-button class="md-fab md-fab-sm md-primary">?</md-button>
+                                                                                    <div class="callout callout-info" uib-collapse="isCollapsed">
+                                                                                        <h5>彭祖</h5>
+                                                                                        <small>男，汉族，出生于1949年农历腊月二十八，A型血，2016年10月1日入院，小学文化程度，身份证号码371121194912280217。</small>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="divider divider-sm"></div>
+                                                                            <div class="row">
+                                                                                <small class="col-md-12"><b>备注：</b>房间内配备国内/国际电话、液晶电视机、有线/卫星电视频道、电脑</small>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="list-group-item">
+                                                                            <h4>102</h4>
+                                                                            <div class="row">
+                                                                                <small class="col-md-4 col-sm-6 col-xs-12"><b>楼层：</b>1层</small>
+                                                                                <small class="col-md-4 col-sm-6 col-xs-12"><b>类型：</b>大床房</small>
+                                                                                <small class="col-md-4 col-sm-6 col-xs-12"><b>床型：</b>双人床2米，1张</small>
+                                                                                <small class="col-md-4 col-sm-6 col-xs-12"><b>面积：</b>36㎡</small>
+                                                                                <small class="col-md-4 col-sm-6 col-xs-12"><b>朝向：</b>北</small>
+                                                                                <small class="col-md-4 col-sm-6 col-xs-12"><b>人数：</b>1人</small>
+                                                                            </div>
+                                                                            <div class="divider divider-sm"></div>
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <img alt="" src="images/bed-1.jpg" class="img img40_40">
+                                                                                    <img alt="" src="images/bed-2.jpg" class="img img40_40">
+                                                                                    <img alt="" src="images/bed-1.jpg" class="img img40_40">
+                                                                                    <img alt="" src="images/bed-2.jpg" class="img img40_40">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="divider divider-sm"></div>
+                                                                            <div class="row">
+                                                                                <small class="col-md-12"><b>居住情况：</b></small>
+                                                                            </div>
+                                                                            <div class="divider divider-sm"></div>
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <md-button class="md-fab md-fab-sm md-primary">?</md-button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="list-group-item">
+                                                                            <h4>103</h4>
+                                                                            <div class="row">
+                                                                                <small class="col-md-4 col-sm-6 col-xs-12"><b>楼层：</b>1层</small>
+                                                                                <small class="col-md-4 col-sm-6 col-xs-12"><b>类型：</b>四人间</small>
+                                                                                <small class="col-md-4 col-sm-6 col-xs-12"><b>床型：</b>单人床1.2米，4张</small>
+                                                                                <small class="col-md-4 col-sm-6 col-xs-12"><b>面积：</b>36㎡</small>
+                                                                                <small class="col-md-4 col-sm-6 col-xs-12"><b>朝向：</b>北</small>
+                                                                                <small class="col-md-4 col-sm-6 col-xs-12"><b>人数：</b>4人</small>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <small class="col-md-12"><b>居住情况：</b></small>
+                                                                            </div>
+                                                                            <div class="divider divider-sm"></div>
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <md-button class="md-fab md-fab-sm">刘</md-button>
+                                                                                    <md-button class="md-fab md-fab-sm">李</md-button>
+                                                                                    <md-button class="md-fab md-fab-sm md-primary">?</md-button>
+                                                                                    <md-button class="md-fab md-fab-sm md-primary">?</md-button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </uib-tab>
+                                                        <uib-tab heading="F2">
+                                                            <p>Quod ea vel dolores earum veritatis quae sunt tempore odit molestias sit optio quaerat cupiditate iure repudiandae illum doloremque consectetur incidunt!</p>
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, aspernatur, eum fugit officiis numquam iste aut illo quos pariatur Eligendi, veniam, accusamus.</p>
+                                                            <p>Consectetur adipisicing elit. Reprehenderit enim obcaecati inventore, beatae corporis voluptate, repudiandae voluptatum nesciunt ipsam provident aliquam accusamus assumenda est, veritatis molestias velit non minus laudantium.</p>
+                                                        </uib-tab>
+                                                        <uib-tab heading="F3">
+                                                            <p>Blanditiis tenetur harum distinctio voluptate asperiores non magnam delectus. Consequatur, deleniti rem magnam possimus necessitatibus iusto suscipit mollitia rerum.</p>
+                                                            <p>Quod ea vel dolores earum veritatis quae sunt tempore consectetur adipisicing elit. Suscipit, odit molestias sit optio quaerat cupiditate iure repudiandae illum doloremque consectetur incidunt!</p>
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, aspernatur, eum fugit officiis numquam iste aut illo quos pariatur Eligendi, veniam, accusamus.</p>
+                                                        </uib-tab>
+                                                        <uib-tab heading="F4">
+                                                            <p>Blanditiis tenetur harum distinctio voluptate asperiores non magnam delectus. Consequatur, deleniti rem magnam possimus necessitatibus iusto suscipit mollitia rerum.</p>
+                                                            <p>Quod ea vel dolores earum veritatis quae sunt tempore consectetur adipisicing elit. Suscipit, odit molestias sit optio quaerat cupiditate iure repudiandae illum doloremque consectetur incidunt!</p>
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, aspernatur, eum fugit officiis numquam iste aut illo quos pariatur Eligendi, veniam, accusamus.</p>
+                                                        </uib-tab>
+                                                        <uib-tab heading="F5">
+                                                            <p>Blanditiis tenetur harum distinctio voluptate asperiores non magnam delectus. Consequatur, deleniti rem magnam possimus necessitatibus iusto suscipit mollitia rerum.</p>
+                                                            <p>Quod ea vel dolores earum veritatis quae sunt tempore consectetur adipisicing elit. Suscipit, odit molestias sit optio quaerat cupiditate iure repudiandae illum doloremque consectetur incidunt!</p>
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, aspernatur, eum fugit officiis numquam iste aut illo quos pariatur Eligendi, veniam, accusamus.</p>
+                                                        </uib-tab>
+                                                        <uib-tab heading="F6">
+                                                            <p>Blanditiis tenetur harum distinctio voluptate asperiores non magnam delectus. Consequatur, deleniti rem magnam possimus necessitatibus iusto suscipit mollitia rerum.</p>
+                                                            <p>Quod ea vel dolores earum veritatis quae sunt tempore consectetur adipisicing elit. Suscipit, odit molestias sit optio quaerat cupiditate iure repudiandae illum doloremque consectetur incidunt!</p>
+                                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, aspernatur, eum fugit officiis numquam iste aut illo quos pariatur Eligendi, veniam, accusamus.</p>
+                                                        </uib-tab>
+                                                    </uib-tabset>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </md-tab>
+                            </md-tabs>
+                        </div>
+                    </section>
+                </div>
+                <!--
+                <div class="col-md-3">
+                    <section class="panel panel-default">
+                        <div class="panel-body no-padding" >
+                            <form ng-submit="addTab(tTitle,tContent)" layout="column" class="md-padding" style="padding-top: 0;">
+                                <h4 style="transform: uppercase;">添加一座新的楼宇</h4>
+
+                                <md-input-container>
+                                    <label for="label">楼宇名称</label>
+                                    <input type="text" id="label" ng-model="tTitle">
+                                </md-input-container>
+                                <md-input-container>
+                                    <label for="content">备注</label>
+                                    <input type="text" id="content" ng-model="tContent">
+                                </md-input-container>
+                                <md-button class=" md-primary md-raised" ng-disabled="!tTitle || !tContent" type="submit">确定</md-button>
                             </form>
                         </div>
-                        <div class="col-sm-3 col-xs-6 filter-result-info">
-                            <span>Showing&nbsp;{{filteredStores.length}}/{{stores.length}}&nbsp;entries</span>
-                        </div>
-                    </div>
+                    </section>
                 </div>
-                <table class="table table-bordered table-striped table-responsive">
-                    <thead>
-                    <tr>
-                        <th>
-                            <div class="th">Store Name
-                                <span class="fa fa-angle-up" data-ng-click=" order('name') " data-ng-class="{active: row == 'name'}"></span>
-                                <span class="fa fa-angle-down" data-ng-click=" order('-name') " data-ng-class="{active: row == '-name'}"></span>
-                            </div>
-                        </th>
-                        <th>
-                            <div class="th">Price
-                                <span class="fa fa-angle-up" data-ng-click=" order('price') " data-ng-class="{active: row == 'price'}"></span>
-                                <span class="fa fa-angle-down" data-ng-click=" order('-price') " data-ng-class="{active: row == '-price'}"></span>
-                            </div>
-                        </th>
-                        <th>
-                            <div class="th">Sales (in 7 days)
-                                <span class="fa fa-angle-up" data-ng-click=" order('sales') " data-ng-class="{active: row == 'sales'}"></span>
-                                <span class="fa fa-angle-down" data-ng-click=" order('-sales') " data-ng-class="{active: row == '-sales'}"></span>
-                            </div>
-                        </th>
-                        <th>
-                            <div class="th">Rating
-                                <span class="fa fa-angle-up" data-ng-click=" order('rating') " data-ng-class="{active: row == 'rating'}"></span>
-                                <span class="fa fa-angle-down" data-ng-click=" order('-rating') " data-ng-class="{active: row == '-rating'}"></span>
-                            </div>
-                        </th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr data-ng-repeat="store in currentPageStores">
-                        <td>{{store.name}}</td>
-                        <td>{{store.price}}</td>
-                        <td>{{store.sales}}</td>
-                        <td>{{store.rating}}</td>
-                    </tr>
-                    </tbody>
-                </table>
-                <footer class="table-footer">
-                    <div class="row">
-                        <div class="col-md-6 page-num-info">
-                            <span>Show&nbsp;<select data-ng-model="numPerPage" data-ng-options="num for num in numPerPageOpt" data-ng-change="onNumPerPageChange()"></select>&nbsp;entries per page</span>
-                        </div>
-                        <div class="col-md-6 text-right pagination-container">
-                            <uib-pagination class="pagination-sm"
-                                            ng-model="currentPage"
-                                            total-items="filteredStores.length"
-                                            max-size="4"
-                                            ng-change="select(currentPage)"
-                                            items-per-page="numPerPage"
-                                            rotate="false"
-                                            previous-text="&lsaquo;" next-text="&rsaquo;"
-                                            boundary-links="true"></uib-pagination>
-                        </div>
-                    </div>
-                </footer>
-            </section>
+                -->
+            </div>
         </div>
     </div>
 </div>

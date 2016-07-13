@@ -6,21 +6,23 @@
         'app.core'
 
         // Custom Feature modules
-        , 'app.chart'
-        , 'app.ui'
-        , 'app.ui.form'
-        , 'app.ui.form.validation'
+        // , 'app.chart'
+        // , 'app.ui'
+        // , 'app.ui.form'
+        // , 'app.ui.form.validation'
         , 'app.page'
-        , 'app.table'
+        // , 'app.table'
 
         // Business modules
+        , 'app.beds'
         , 'app.members'
+        , 'app.reception'
 
         // 3rd party feature modules
-        , 'mgo-angular-wizard'
-        , 'ui.tree'
-        , 'ngMap'
-        , 'textAngular'
+        // , 'mgo-angular-wizard'
+        // , 'ui.tree'
+        // , 'ngMap'
+        // , 'textAngular'
     ]);
 })();
 

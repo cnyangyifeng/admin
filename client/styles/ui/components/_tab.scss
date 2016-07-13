@@ -1,5 +1,4 @@
 // Dependency: Angular UI Bootstrap
-
 .ui-tab {
     .nav-tabs {
         margin-bottom: 15px;
@@ -64,7 +63,7 @@
             &.active {
                 > a {
                     color: $link-color;
-                }                
+                }
             }
 
             &:hover,
@@ -79,7 +78,8 @@
                 margin: 0;
                 border: 0;
                 padding: 15px 15px;
-                font-weight: bold;
+                // font-weight: bold;
+                font-weight: 500;
                 border-radius: 0;
             }
         }
@@ -117,18 +117,17 @@
                 }
             }
         }
-
     }
 }
 
 .ui-tab-vertical {
     position: relative;
-    padding: 0 0 0 30%;
+    padding: 0 0 0 18%;
     .nav-tabs {
         position: absolute;
         left: 0;
         top: 0;
-        width: 30%;
+        width: 18%;
         background-color: $state-default-bg;
         border-width: 1px 0 1px 1px;
         border-radius: $border-radius-base 0 0 $border-radius-base;
@@ -164,13 +163,11 @@
             > a {
                 display: block;
             }
-        }        
+        }
     }
 
     .tab-content {
         border: 1px solid $nav-tabs-border-color;
         border-radius: 0 $border-radius-base $border-radius-base 0;
     }
-
 }
-
